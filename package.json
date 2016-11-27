@@ -1,0 +1,21 @@
+{
+  "name": "sms-doctor",
+  "version": "1.0.0",
+  "description": "Break Inqeuality Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SMSDoctor/app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SMSDoctor/app/issues"
+  },
+  "homepage": "https://github.com/SMSDoctor/app#readme",
+  "keywords": []
+}
