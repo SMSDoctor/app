@@ -65,5 +65,5 @@ function getPatientRecord(record_id){
 exports.addRecord = addRecord;
 exports.addPatient = addPatient;
 exports.editRecord = editRecord;
-exports.setRecordStatusToDone = setStatusToDone;
+exports.setRecordStatusToDone = setRecordStatusToDone;
 exports.getPatientRecord = getPatientRecord;
