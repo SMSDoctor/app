@@ -16,7 +16,9 @@ http.createServer(function(request, response){
            response.write(data.toString());
       //     db.addPatient('{"first_name":"Barbara", "last_name":"Tester","phone_number":"+1234567890", "pregnancy_flag" : false, "preganancy_timeline": 0}');
       //     db.addRecord('{"caller_num" : "+1234567890", "symptoms" : ["nothing", "nothing"]}');
-             db.editRecord("-KXa1DRH5Xmb5X7Co63F", '{"symptoms" : ["cough", "fever"]}');
+      //       db.editRecord("-KXa1DRH5Xmb5X7Co63F", '{"symptoms" : ["cough", "fever"]}');
+             db.setRecordStatusToDone("-KXa1DRH5Xmb5X7Co63F");
+             db.getPatientRecord("-KXa1DRH5Xmb5X7Co63F");
         }
         response.end();
     });
