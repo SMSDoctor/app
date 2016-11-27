@@ -1,0 +1,38 @@
+[
+	{
+		
+		"fever":
+			{
+				"high":
+					{
+						 "message": "if you have a fever that lasts for more than 48 hours or does not break with acetaminophen please seek prompt medical attention."
+					},
+                                "low":
+					{
+						 "message": "1114"
+					}
+			},
+                "nausea":
+			{
+				"batter":
+					{
+						 "message": "1404"
+					},
+                                "batter2":
+					{
+						 "message": "1804"
+					}
+			},
+		"fainting":
+			{
+				"batter3":
+					{
+						 "id": "1604"
+					},
+                                "batter4":
+					{
+						 "id": "1064"
+					}
+			}
+	}
+]
