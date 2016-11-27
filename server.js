@@ -14,6 +14,9 @@ http.createServer(function(request, response){
           //print html page
            response.writeHead(200, {'Content-Type': 'text/html'});
            response.write(data.toString());
+      //     db.addPatient('{"first_name":"Barbara", "last_name":"Tester","phone_number":"+1234567890", "pregnancy_flag" : false, "preganancy_timeline": 0}');
+      //     db.addRecord('{"caller_num" : "+1234567890", "symptoms" : ["nothing", "nothing"]}');
+             db.editRecord("-KXa1DRH5Xmb5X7Co63F", '{"symptoms" : ["cough", "fever"]}');
         }
         response.end();
     });
