@@ -17,5 +17,8 @@
     "url": "https://github.com/SMSDoctor/app/issues"
   },
   "homepage": "https://github.com/SMSDoctor/app#readme",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "firebase": "^3.6.1"
+  }
 }
