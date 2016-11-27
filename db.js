@@ -24,6 +24,16 @@ function addDoctor(data_string){
     return;
 }
 
+function getPatientQueueForDoctor(doctor_phone_num){
+  var ref = db.database().ref('doctors/' + doctor_phone_num);
+  var queue = [];
+  ref.once("value", function(snapshot){
+    queue = snapshot.val().patient_queue;
+  }).then(function(){
+    return queue;
+  });
+}
+
 function setRecordStatusToDone(record_id){
   db.database().ref('medical_records/' + record_id).update({"done":"true"});
 }
@@ -36,13 +46,20 @@ function addRecord(data_string){
     var formatted_time = date.getHours() + ":" + date.getMinutes();
     var formatted_date = date.getDate() + "-" + ( date.getMonth() + 1 ) + "-" + date.getFullYear();
 
-    db.database().ref('medical_records').push({
+    var postRef = db.database().ref('medical_records').push({
        patient_id : data.caller_num,
        time       : formatted_time,
        date       : formatted_date,
        symptoms   : data.symptoms,
+       doctor_id  : "+1212121212", //TODO: allow for dynamic assignment
        done       : "false"
     });
+
+     var key = postRef.key;
+     var queue = getPatientQueueForDoctor("+1212121212");
+     queue.push(key);
+     db.database().ref('doctors/+1212121212').update({"patient_queue" : queue});
+
 }
 
 function editRecord(record_id, data_string){

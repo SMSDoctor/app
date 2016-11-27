@@ -1,5 +1,5 @@
-//currently just makes a stupid table of numbers, needs to be filled with the first 5 entries of the database
-
+//gains access to db functions
+var db = require('./db.js');
 
 var table = '';
 
@@ -8,7 +8,7 @@ function f(){
 		table+='<tr>';
 		for(var c = 0; c<9; c++){
 			table += '<td>' + c + '</td>';
-		}		 
+		}
 		table +='</tr>';
 	}
 	document.write('<table border=1>' + table + '</table>');
