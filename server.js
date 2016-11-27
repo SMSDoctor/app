@@ -1,6 +1,7 @@
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
+var db = require('./db.js');
 
 //creating instance of the server
 http.createServer(function(request, response){
